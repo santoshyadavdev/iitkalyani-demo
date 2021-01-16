@@ -1,0 +1,32 @@
+<!-- interpolation -->
+<h1>
+  {{ department }}
+</h1>
+
+{{hidden}}
+
+<!-- property binding -->
+<div *ngIf="hidden" [innerText]="name"></div>
+
+<!-- event binding -->
+<button (click)="toggle()">Toggle</button>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>User Id</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.id}}</td>
+      <td>{{todo.userId}}</td>
+      <td>{{todo.title}}</td>
+      <td>{{todo.completed}}</td>
+    </tr>
+  </tbody>
+</table>
